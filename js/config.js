@@ -19,8 +19,12 @@ $(function() {
 	    // how simpleCart should checkout, see the checkout reference for more info
 	    checkout: {
 	        type: "SendForm" ,
-		url: "https://maker.ifttt.com/trigger/shop/with/key/de4sE6cA9wc2wrC7AcV1wB"
-// 	        email: "you@yours.com"
+		url: "https://maker.ifttt.com/trigger/shop/with/key/de4sE6cA9wc2wrC7AcV1wB",
+// 	        email: "you@yours.com",
+		    extra_data: {
+          storename: "Bob's cool plumbing store",
+          cartid: "12321321"
+        }
 	    },
 
 	    // set the currency, see the currency reference for more info
