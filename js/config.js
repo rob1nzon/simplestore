@@ -19,7 +19,7 @@ $(function() {
 	    // how simpleCart should checkout, see the checkout reference for more info
 	    checkout: {
 	        type: "SendForm" ,
-		url: "https://maker.ifttt.com/trigger/{event}/with/key/de4sE6cA9wc2wrC7AcV1wB"
+		url: "https://maker.ifttt.com/trigger/shop/with/key/de4sE6cA9wc2wrC7AcV1wB"
 // 	        email: "you@yours.com"
 	    },
 
