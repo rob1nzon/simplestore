@@ -31,7 +31,7 @@ $(function() {
 	   
 	    // collection of arbitrary data you may want to store with the cart,
 	    // such as customer info
-	    data: {},
+	    data: {'name'},
 
 	    // set the cart langauge (may be used for checkout)
 	    language: "english-us",
@@ -80,7 +80,7 @@ $(function() {
 	    delimiter: " " , 
 	    decimal: "," , 
 	    after: true ,
-	    accuracy: 3
+	    accuracy: 2
 });
 	simpleStore.init({
 
