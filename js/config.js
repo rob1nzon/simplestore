@@ -1,6 +1,6 @@
 $(function() {
 	simpleCart.bind( 'beforeCheckout' , function( data ){
-  data.value3 = "ABC-123456789";
+  data.value3 = NameInput.value;
 });
 	simpleCart({
 
