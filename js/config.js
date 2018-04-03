@@ -22,7 +22,7 @@ $(function() {
 		url: "https://maker.ifttt.com/trigger/shop/with/key/de4sE6cA9wc2wrC7AcV1wB",
 // 	        email: "you@yours.com",
 		    extra_data: {
-          value1: NameInput,
+          value1: "4",
           value2: "12321321"
         }
 	    },
