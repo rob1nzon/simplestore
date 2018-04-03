@@ -21,13 +21,14 @@
 			"soldOut" : true
 		},
 		{
-			"name" : "Fun T-shirt",
-			"price" : "15.99",
+			"name" : "Носки с картинами",
+			"price" : "150",
 			"options" : [
-				{ "Size" : "Small,Medium,Large" }
+				{ "Размеры" : "Small,Medium,Large" },
+				{"Тип": "1,2,3"}
 			],
-			"image" : "http://upload.wikimedia.org/wikipedia/commons/c/c6/Grey_Tshirt.jpg",
-			"description" : "This is another fun grey T-shirt"
+			"image" : "https://ae01.alicdn.com/kf/HTB1CtYielTH8KJjy0Fiq6ARsXXaE/Dropshipping.jpg_640x640.jpg",
+			"description" : "Произведение исскуства на ваших ногах"
 		}
 	]
 }
