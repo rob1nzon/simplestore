@@ -1,6 +1,6 @@
  module.exports = function(grunt) {
 
- 	/*
+ 	/* 5
  	 * To build a release run 'grunt'
  	 * index.html has to be manually copied to 'release/' because of
  	 * reference differences (import.min.css, jquery)
