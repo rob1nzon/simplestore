@@ -76,7 +76,7 @@ $(function() {
 	simpleCart.currency({
     code: "RUB" ,
 	    name: "рубли" ,
-	    symbol: " $AWE" ,
+	    symbol: "₽" ,
 	    delimiter: " " , 
 	    decimal: "," , 
 	    after: true ,
