@@ -37,7 +37,7 @@ data.value2 = localStorage.simpleCart_items;
 // 	        email: "you@yours.com",
 		success: "success.html" , 
       		// url to return to on cancelled checkout, default is null
-        	cancel: "cancel.html" ,
+        	cancel: "cancel.html" 
 	    },
 
 	    // set the currency, see the currency reference for more info
