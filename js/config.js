@@ -18,19 +18,20 @@ $(function() {
 
 	    // how simpleCart should checkout, see the checkout reference for more info
 	    checkout: {
-	        type: "PayPal" ,
-	        email: "you@yours.com"
+	        type: "SendForm" ,
+		url: "https://maker.ifttt.com/trigger/{event}/with/key/de4sE6cA9wc2wrC7AcV1wB"
+// 	        email: "you@yours.com"
 	    },
 
 	    // set the currency, see the currency reference for more info
-	    currency: "USD",
+	    currency: "RUB",
 
 	    // collection of arbitrary data you may want to store with the cart,
 	    // such as customer info
 	    data: {},
 
 	    // set the cart langauge (may be used for checkout)
-	    language: "english-us",
+	    language: "russian-ru",
 
 	    // array of item fields that will not be sent to checkout
 	    excludeFromCheckout: [
