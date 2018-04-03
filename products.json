@@ -2,7 +2,7 @@
 	"products" : [
 		{
 			"name" : "Носки медведи",
-			"price" : "150₽",
+			"price" : "150",
 			"options" : [
 				{ "Размеры" : "Small,Medium,Large" }
 			],
@@ -22,7 +22,7 @@
 		},
 		{
 			"name" : "Носки с картинами",
-			"price" : "150₽",
+			"price" : "150",
 			"options" : [
 				{ "Размеры" : "Small,Medium,Large" },
 				{"Тип": "1,2,3"}
