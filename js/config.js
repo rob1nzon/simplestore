@@ -1,6 +1,16 @@
 $(function() {
 	simpleCart.bind( 'beforeCheckout' , function( data ){
-  data.value3 = NameInput.value;
+  data.value1 = NameInput.value+" "+EmailInput.value+" "+PhoneInput.value;
+  order = document.getElementsByClassName('itemRow');
+  order_str='';
+for (var i = 0; i < len(order); i++) {
+   order_str+=order[i].getElementsByClassName('item-name')[0].innerText;
+   order_str+=': '
+   order_str+=order[i].getElementsByClassName('item-quantity')[0].innerText;
+   order_str+=', '
+}
+data.value2 = order_str;
+
 });
 	simpleCart({
 
@@ -24,10 +34,6 @@ $(function() {
 	        type: "SendForm" ,
 		url: "https://maker.ifttt.com/trigger/shop/with/key/de4sE6cA9wc2wrC7AcV1wB",
 // 	        email: "you@yours.com",
-		    extra_data: {
-          value1: "4",
-          value2: "12321321"
-        }
 	    },
 
 	    // set the currency, see the currency reference for more info
