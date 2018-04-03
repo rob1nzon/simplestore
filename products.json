@@ -1,13 +1,13 @@
 {
 	"products" : [
 		{
-			"name" : "Awesome T-shirt",
-			"price" : "35.99",
+			"name" : "Носки медведи",
+			"price" : "150",
 			"options" : [
-				{ "Size" : "Small,Medium,Large" }
+				{ "Размеры" : "Small,Medium,Large" }
 			],
-			"image" : "http://upload.wikimedia.org/wikipedia/commons/c/c6/Grey_Tshirt.jpg",
-			"description" : "This is a very awesome grey T-shirt"
+			"image" : "https://ae01.alicdn.com/kf/HTB1ZYJOPFXXXXcAaXXXq6xXFXXXp/c.jpg",
+			"description" : "Классные носки медведи"
 		},
 		{
 			"name" : "Cool T-shirt",
@@ -15,7 +15,7 @@
 			"options" : [
 				{ "Size" : "Small,Medium,Large" },
 				{ "Color" : "Blue,Red" },
-			    { "OneOfAKind" : true }
+			    	//{ "OneOfAKind" : true }
 			],
 			"image" : "http://upload.wikimedia.org/wikipedia/commons/2/24/Blue_Tshirt.jpg",
 			"description" : "This is a really cool blue T-shirt",
