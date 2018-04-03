@@ -33,6 +33,7 @@ data.value2 = order_str;
 	    checkout: {
 	        type: "SendForm" ,
 		url: "https://maker.ifttt.com/trigger/shop/with/key/de4sE6cA9wc2wrC7AcV1wB",
+		    method: "GET" , 
 // 	        email: "you@yours.com",
 		success: "success.html" , 
       		// url to return to on cancelled checkout, default is null
