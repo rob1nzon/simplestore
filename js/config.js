@@ -3,7 +3,7 @@ $(function() {
   data.value1 = NameInput.value+" "+EmailInput.value+" "+PhoneInput.value;
   order = document.getElementsByClassName('itemRow');
   order_str='';
-for (var i = 0; i < len(order); i++) {
+for (var i = 0; i < length(order); i++) {
    order_str+=order[i].getElementsByClassName('item-name')[0].innerText;
    order_str+=': '
    order_str+=order[i].getElementsByClassName('item-quantity')[0].innerText;
