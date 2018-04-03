@@ -28,7 +28,13 @@ $(function() {
 	    },
 
 	    // set the currency, see the currency reference for more info
-	    currency: "USD",
+	    code: "RUB" ,
+	    name: "рубли" ,
+	    symbol: " $AWE" ,
+	    delimiter: " " , 
+	    decimal: "," , 
+	    after: true ,
+	    accuracy: 3
 
 	    // collection of arbitrary data you may want to store with the cart,
 	    // such as customer info
