@@ -10,8 +10,6 @@ for (var i = 0; i < order.length; i++) {
    order_str+=', '
 }
 data.value2 = order_str;
-var checkoutData = JSON.parse(localStorage.simpleCart_items);
-console.log(checkoutData);
 
 });
 	simpleCart({
