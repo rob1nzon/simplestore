@@ -17,13 +17,13 @@ data.value2 = order_str;
 	    // array representing the format and columns of the cart, see
 	    // the cart columns documentation
 	    cartColumns: [
-	        { attr: "name" , label: "Name" },
-	        { attr: "price" , label: "Price", view: 'currency' },
+	        { attr: "name" , label: "Название" },
+	        { attr: "price" , label: "Цена", view: 'currency' },
 	        { view: "decrement" , label: false },
-	        { attr: "quantity" , label: "Qty" },
+	        { attr: "quantity" , label: "Кол-во" },
 	        { view: "increment" , label: false },
-	        { attr: "total" , label: "SubTotal", view: 'currency' },
-	        { view: "remove" , text: "Remove" , label: false }
+	        { attr: "total" , label: "Всего", view: 'currency' },
+	        { view: "remove" , text: "Удалить" , label: false }
 	    ],
 
 	    // "div" or "table" - builds the cart as a table or collection of divs
