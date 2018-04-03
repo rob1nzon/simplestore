@@ -28,15 +28,7 @@ $(function() {
 	    },
 
 	    // set the currency, see the currency reference for more info
-	    currency: {
-	    code: "RUB" ,
-	    name: "рубли" ,
-	    symbol: " $AWE" ,
-	    delimiter: " " , 
-	    decimal: "," , 
-	    after: true ,
-	    accuracy: 3
-	    },
+	   
 	    // collection of arbitrary data you may want to store with the cart,
 	    // such as customer info
 	    data: {},
@@ -81,7 +73,15 @@ $(function() {
 	    beforeCheckout              : null
 
 	});
-
+	simpleCart.currency({
+    code: "RUB" ,
+	    name: "рубли" ,
+	    symbol: " $AWE" ,
+	    delimiter: " " , 
+	    decimal: "," , 
+	    after: true ,
+	    accuracy: 3
+});
 	simpleStore.init({
 
 		// brand can be text or image URL
