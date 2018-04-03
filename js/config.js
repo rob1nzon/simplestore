@@ -1,4 +1,7 @@
 $(function() {
+	simpleCart.bind( 'beforeCheckout' , function( data ){
+  data.value3 = "ABC-123456789";
+});
 	simpleCart({
 
 	    // array representing the format and columns of the cart, see
