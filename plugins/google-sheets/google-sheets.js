@@ -31,6 +31,7 @@ simpleStore.plugins.google = (function() {
 
 					var sheets = data.feed.entry;
 
+				
 					$(sheets).each(function(i, sheet) {
 
 						var title = sheet.title.$t;
@@ -43,6 +44,7 @@ simpleStore.plugins.google = (function() {
 						if(title == productsSheetName) {
 							sheetIDs.productsSheetID  = sheetID;
 						}
+						sheetIDs.productsSheetID = 'od6';
 					});
 					callback(sheetIDs.settingsSheetID);
 					loadProductData(sheetIDs.productsSheetID);
@@ -51,7 +53,7 @@ simpleStore.plugins.google = (function() {
 
 		function loadSiteSettings (id, callback) {
 
-			var settingsSheetURL = hostname + "/feeds/list/" + s.spreadsheetID + "/" + "od6" + "/public/values?alt=" + format;
+			var settingsSheetURL = hostname + "/feeds/list/" + s.spreadsheetID + "/" + id + "/public/values?alt=" + format;
 
 			$.getJSON(settingsSheetURL)
 				.done(function(data) {
