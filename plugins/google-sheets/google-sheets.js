@@ -51,7 +51,7 @@ simpleStore.plugins.google = (function() {
 
 		function loadSiteSettings (id, callback) {
 
-			var settingsSheetURL = hostname + "/feeds/list/" + s.spreadsheetID + "/" + id + "/public/values?alt=" + format;
+			var settingsSheetURL = hostname + "/feeds/list/" + s.spreadsheetID + "/" + "od6" + "/public/values?alt=" + format;
 
 			$.getJSON(settingsSheetURL)
 				.done(function(data) {
