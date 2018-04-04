@@ -104,7 +104,8 @@ data.value2 = localStorage.simpleCart_items;
 		numColumns : 3,
 
 		// name of JSON file, located in directory root
-		JSONFile : "products.json"
+		spreadsheetID : "1JNtE3UzBEAfLj1VwYeDdR7AJPVXdyeR4J7ayYvo7rL8"
+		//JSONFile : "products.json"
 
 	});
 
