@@ -80,7 +80,7 @@ var simpleStore = {
         tmpl.find('.item_thumb').attr("src", product.image);
         tmpl.find('.item_name').text(product.name);
         tmpl.find('.item_price').text(product.price);
-        tmpl.find('.item_description').text(product.description);
+        tmpl.find('.item_description').html(product.description);
     },
 
     renderProducts: function (products, s) {
