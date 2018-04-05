@@ -86,6 +86,7 @@ var simpleStore = {
 
     insertData: function (tmpl, product) {
         tmpl.find('.item_thumb').attr("src", product.image);
+	tmpl.find('.zoom').attr("style", "background-image: url(//"+product.image+")");
         tmpl.find('.item_name').text(product.name);
         tmpl.find('.item_price').text(product.price);
         tmpl.find('.item_description').text(product.description);
