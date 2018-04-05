@@ -93,6 +93,10 @@ a.hover {
     margin-bottom: 1.5rem;
 }
 
+.img_desc {
+width: 600px;
+}
+
 .headerRow {
     display: table-row;
     font-weight: 700;
@@ -305,7 +309,7 @@ p.notify_text {
 	margin-bottom: 0rem;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 800px) {
     .simpleStore_getDetail_container {
         width: 100%;
     }
@@ -360,18 +364,4 @@ p.notify_text {
         display: none !important;
     }
 }
-figure.zoom {
-  & img:hover {
-    opacity: 0;
-  }
-  img {
-    transition: opacity .5s;
-    display: block;
-    width: 100%;
-  }
-  background-position: 50% 50%;
-  position: relative;
-  width: 500px;
-  overflow: hidden;
-  cursor: zoom-in;
-}
+
