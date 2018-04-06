@@ -6,6 +6,7 @@
 * http://www.opensource.org/licenses/mit-license.php
 */
 
+
 var simpleStore = {
 
     products: [],
@@ -56,7 +57,7 @@ var simpleStore = {
         var map = {
             // Main view
             '': function () {
-                simpleStore.renderProducts(simpleStore.products, s);
+                simpleStore.renderProducts(simpleStore.products, s, '');
             },
             // Detail view
             '#product': function () {
@@ -66,6 +67,11 @@ var simpleStore = {
             // Cart view
             '#cart': function () {
                 simpleStore.renderCart(s);
+            },
+            // Category
+            '#category': function () {
+            var id = url.split('#category/')[1].trim();
+                simpleStore.renderProducts(simpleStore.products, s, id);
             }
         };
 
@@ -83,8 +89,8 @@ var simpleStore = {
         tmpl.find('.item_description').html(product.description);
     },
 
-    renderProducts: function (products, s) {
-
+    renderProducts: function (products, s, category) {
+//        console.log(category);
         var rowCount = 1,
             numProducts = products.length,
             numRows = Math.ceil(products.length / s.numColumns),
@@ -111,35 +117,36 @@ var simpleStore = {
 
             // List layout
             products.forEach(function (product, i) {
+                if (category=='' || product.category==category) {
+                    if (!product.soldOut) {
+                        var tmpl = $('#products-template').html(),
+                            $tmpl = $(tmpl);
 
-				if (!product.soldOut) {
-					var tmpl = $('#products-template').html(),
-						$tmpl = $(tmpl);
+                        // Set item width
+                        $tmpl.first().addClass(itemWidth);
 
-					// Set item width
-					$tmpl.first().addClass(itemWidth);
+                        // Insert data into template
+                        simpleStore.insertData($tmpl, product);
 
-					// Insert data into template
-					simpleStore.insertData($tmpl, product);
+                        // Render detail view on hash change
+                        var getDetail = $tmpl.find('.simpleStore_getDetail');
+                        getDetail.on('click', function (e) {
+                            e.preventDefault();
+                            window.location.hash = 'product/' + product.id;
+                        });
 
-					// Render detail view on hash change
-					var getDetail = $tmpl.find('.simpleStore_getDetail');
-					getDetail.on('click', function (e) {
-						e.preventDefault();
-						window.location.hash = 'product/' + product.id;
-					});
+                        // Check where to add new item based on row
+                        if (i === 0) {
+                            i = 1;
+                        }
+                        if (i % (s.numColumns) === 0) {
+                            rowCount++;
+                        }
 
-					// Check where to add new item based on row
-					if (i === 0) {
-						i = 1;
-					}
-					if (i % (s.numColumns) === 0) {
-						rowCount++;
-					}
-
-					// Append to appropriate container
-					$('.' + s.rowClass + rowCount).append($tmpl);
-				}
+                        // Append to appropriate container
+                        $('.' + s.rowClass + rowCount).append($tmpl);
+                    }
+               }
             });
         });
     },
@@ -340,6 +347,8 @@ var simpleStore = {
 
 	setLayout: function (s) {
 		// Set brand
+		s.brand='Socks store';
+		console.log(s.brand);
         if (s.brand.match('^http://') || s.brand.match('^https://') || s.brand.match('^www.')) {
             $('.brand').html('<img src="' + s.brand + '" />');
         } else {

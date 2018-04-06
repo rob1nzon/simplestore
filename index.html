@@ -33,10 +33,17 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container simpleStore">
         <div class="row">
-            <a class="brand" href="#"></a>
+            <a class="brand" href="#"><h5>Sock store</h5></a>
             <a class="button button-primary u-pull-right simpleStore_viewCart">
                 <i class="fa fa-shopping-cart"></i> Корзина <span class="simpleCart_total"></span>
             </a>
+            <select class="u-full-width" id="exampleRecipientInput" onchange="location = this.value;">
+                <option value="#">Категории</option>
+                <option value="#category/животные">животные</option>
+                <option value="#category/комиксы">комиксы</option>
+                <option value="#category/фильмы">фильмы</option>
+                <option value="#category/прикольные">прикольные</option>
+            </select>
         </div>
         <div class="simpleStore_container"></div>
         <div class="simpleStore_cart_container"></div>

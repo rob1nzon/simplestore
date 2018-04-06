@@ -114,7 +114,8 @@ simpleStore.plugins.google = (function() {
 							price : this.gsx$price.$t,
 							description : this.gsx$description.$t,
 							options : setOptions(options),
-							image : this.gsx$image.$t
+							image : this.gsx$image.$t,
+							category : this.gsx$category.$t
 						};
 
 						if (verify) {

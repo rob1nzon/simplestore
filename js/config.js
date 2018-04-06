@@ -98,7 +98,7 @@ data.value2 = localStorage.simpleCart_items;
 	simpleStore.init({
 
 		// brand can be text or image URL
-		brand : "Sock store",
+		brand : "Socks store",
 
 		// numder of products per row (accepts 1, 2 or 3)
 		numColumns : 3,
