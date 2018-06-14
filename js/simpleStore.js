@@ -347,7 +347,7 @@ var simpleStore = {
 
 	setLayout: function (s) {
 		// Set brand
-		s.brand='Socks store';
+		s.brand='Socks store ';
 		console.log(s.brand);
         if (s.brand.match('^http://') || s.brand.match('^https://') || s.brand.match('^www.')) {
             $('.brand').html('<img src="' + s.brand + '" />');
