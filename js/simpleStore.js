@@ -375,7 +375,7 @@ var simpleStore = {
 
     generateCart: function (s) {
         var tmpl = $('#cart-template').html(),
-            $tmpl = $(tmpl)+s.about;
+            $tmpl = $(tmpl);
         s.cartContainer.html($tmpl);
     },
 
