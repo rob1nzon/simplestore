@@ -59,19 +59,19 @@ data.value2 = localStorage.simpleCart_items;
 	    shippingCustom: null,
 
 	    // flat rate shipping option
-	    shippingFlatRate: 0,
+	    shippingFlatRate: 200,
 
 	    // added shipping based on this value multiplied by the cart quantity
 	    shippingQuantityRate: 0,
 
 	    // added shipping based on this value multiplied by the cart subtotal
-	    shippingTotalRate: 0,
+	    shippingTotalRate: 200,
 
 	    // tax rate applied to cart subtotal
-	    taxRate: 0,
+	    taxRate: 200,
 
 	    // true if tax should be applied to shipping
-	    taxShipping: false,
+	    taxShipping: true,
 
 	    // event callbacks
 	    beforeAdd               	: null,

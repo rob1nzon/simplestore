@@ -64,12 +64,20 @@ simpleStore.plugins.google = (function() {
 
 						var siteName = data[0].gsx$sitenametextorimagelink.$t;
 						var columns = data[0].gsx$columns123.$t;
+						var about = data[0].gsx$about.$t;
+						var about_delivery = data[0].gsx$aboutdelivery.$t;
 
 						if (siteName) {
 							s.brand = siteName;
 						}
 						if (columns) {
 							s.numColumns = columns;
+						}
+						if (about) {
+							s.about = about;
+						}
+						if (about_delivery) {
+							s.about_delivery = about_delivery;
 						}
 
 						simpleStore.setLayout(s);

@@ -193,7 +193,8 @@ var simpleStore = {
         s.container.fadeOut(s.fadeSpeed, function () {
             var tmpl = $('#static-template').html(),
                 $tmpl = $(tmpl);
-        s.container.html(tmpl);
+        console.log(simpleStore[id]);
+        s.container.html(tmpl+simpleStore[id]);
         s.container.fadeIn(s.fadeSpeed);
         });
     },
@@ -368,7 +369,8 @@ var simpleStore = {
         } else {
             $('.brand').html('<h5>' + s.brand + '</h5>');
         }
-
+        this.about=s.about;
+        this.about_delivery=s.about_delivery;
 		// Set title
 		$('title').html(s.brand);
 	},
