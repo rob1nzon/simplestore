@@ -64,6 +64,11 @@ var simpleStore = {
                 var id = url.split('#product/')[1].trim();
                 simpleStore.renderSingleProduct(id, s);
             },
+            '#static': function () {
+                var id = url.split('#static/')[1].trim();
+                simpleStore.renderStatic(id, s);
+                console.log(id);
+            },
             // Cart view
             '#cart': function () {
                 simpleStore.renderCart(s);
@@ -182,6 +187,15 @@ var simpleStore = {
         if (option.OneOfAKind) {
             $('.qty').hide();
         }
+    },
+
+    renderStatic: function (id, s) {
+        s.container.fadeOut(s.fadeSpeed, function () {
+            var tmpl = $('#static-template').html(),
+                $tmpl = $(tmpl);
+        s.container.html(tmpl);
+        s.container.fadeIn(s.fadeSpeed);
+        });
     },
 
     renderSingleProduct: function (id, s) {
@@ -347,8 +361,8 @@ var simpleStore = {
 
 	setLayout: function (s) {
 		// Set brand
-		s.brand='Socks store ';
-		console.log(s.brand);
+		//s.brand='Socks store ';
+//		console.log(s.brand);
         if (s.brand.match('^http://') || s.brand.match('^https://') || s.brand.match('^www.')) {
             $('.brand').html('<img src="' + s.brand + '" />');
         } else {
@@ -361,12 +375,11 @@ var simpleStore = {
 
     generateCart: function (s) {
         var tmpl = $('#cart-template').html(),
-            $tmpl = $(tmpl);
+            $tmpl = $(tmpl)+s.about;
         s.cartContainer.html($tmpl);
     },
 
     generateStore: function () {
-
         var s = this.settings;
 
         // Set mode
