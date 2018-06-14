@@ -71,7 +71,7 @@ data.value2 = localStorage.simpleCart_items;
 	    taxRate: 200,
 
 	    // true if tax should be applied to shipping
-	    taxShipping: true,
+	    taxShipping: false,
 
 	    // event callbacks
 	    beforeAdd               	: null,
