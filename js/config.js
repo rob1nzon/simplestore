@@ -65,10 +65,10 @@ data.value2 = localStorage.simpleCart_items;
 	    shippingQuantityRate: 0,
 
 	    // added shipping based on this value multiplied by the cart subtotal
-	    shippingTotalRate: 200,
+	    shippingTotalRate: 0,
 
 	    // tax rate applied to cart subtotal
-	    taxRate: 200,
+	    taxRate: 0,
 
 	    // true if tax should be applied to shipping
 	    taxShipping: false,
